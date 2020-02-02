@@ -69,7 +69,7 @@ class Team {
       // console.log(individualAsString);
       finalTeamAsString.push(individualAsString);
     }
-    console.log(finalTeamAsString);
+    // console.log(finalTeamAsString);
     // console.log(finalTeam);
     // console.log(finalTeam[0].getRole());
     functions.displayTeamPage(finalTeam, finalTeamAsString);
