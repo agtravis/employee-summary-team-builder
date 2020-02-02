@@ -2,6 +2,7 @@
 const functions = require('./lib/functions');
 const manager = require('./lib/manager');
 const engineer = require('./lib/engineer');
+const intern = require('./lib/intern');
 const inquirer = require('inquirer');
 
 const finalTeam = [];
@@ -46,12 +47,21 @@ class Team {
     finalTeam.push(this.engineer);
     this.addEmployee();
   }
-  addIntern() {
-    console.log(`Intern added!`);
+  async addIntern() {
+    const internInfo = await functions.addIntern();
+    this.intern = new intern.Intern(
+      internInfo.internName,
+      internInfo.internId,
+      'Intern',
+      internInfo.internEmail,
+      internInfo.school
+    );
+    finalTeam.push(this.intern);
+    this.addEmployee();
   }
   completeTeam() {
     console.log(`Team Complete!`);
-    console.log(finalTeam);
+    // console.log(finalTeam);
   }
 }
 
