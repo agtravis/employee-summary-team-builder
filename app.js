@@ -6,6 +6,7 @@ const intern = require('./lib/intern');
 const inquirer = require('inquirer');
 
 const finalTeam = [];
+const finalTeamAsString = [];
 
 class Team {
   constructor() {}
@@ -19,6 +20,7 @@ class Team {
       managerInfo.managerEmail,
       managerInfo.officeNumber
     );
+    // console.log(this.manager);
     // console.log(this.manager.getRole());
     finalTeam.push(this.manager);
     this.addEmployee();
@@ -62,9 +64,15 @@ class Team {
   }
   completeTeam() {
     console.log(`Team Complete!`);
+    for (const individual of finalTeam) {
+      const individualAsString = JSON.stringify(individual);
+      // console.log(individualAsString);
+      finalTeamAsString.push(individualAsString);
+    }
+    console.log(finalTeamAsString);
     // console.log(finalTeam);
     // console.log(finalTeam[0].getRole());
-    functions.displayTeamPage(finalTeam);
+    // functions.displayTeamPage(finalTeam);
   }
 }
 
