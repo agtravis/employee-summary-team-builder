@@ -19,6 +19,7 @@ class Team {
       managerInfo.managerEmail,
       managerInfo.officeNumber
     );
+    // console.log(this.manager.getRole());
     finalTeam.push(this.manager);
     this.addEmployee();
   }
@@ -62,6 +63,8 @@ class Team {
   completeTeam() {
     console.log(`Team Complete!`);
     // console.log(finalTeam);
+    // console.log(finalTeam[0].getRole());
+    functions.displayTeamPage(finalTeam);
   }
 }
 
