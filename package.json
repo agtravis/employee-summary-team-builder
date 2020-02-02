@@ -1,0 +1,23 @@
+{
+  "name": "employee-summary-team-builder",
+  "version": "1.0.0",
+  "description": "An interface for generating a webpage with information about a team",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agtravis/employee-summary-team-builder.git"
+  },
+  "author": "George Travis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agtravis/employee-summary-team-builder/issues"
+  },
+  "homepage": "https://github.com/agtravis/employee-summary-team-builder#readme",
+  "dependencies": {
+    "inquirer": "^7.0.4",
+    "jest": "^25.1.0"
+  }
+}
