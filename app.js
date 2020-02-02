@@ -15,6 +15,29 @@ class Team {
       managerInfo.managerEmail,
       managerInfo.officeNumber
     );
+    this.addEmployee();
+  }
+  async addEmployee() {
+    const shouldContinue = await functions.shouldContinue();
+    switch (shouldContinue) {
+      case `engineer`:
+        this.addEngineer();
+        break;
+      case `intern`:
+        this.addIntern();
+        break;
+      default:
+        this.completeTeam();
+    }
+  }
+  addEngineer() {
+    console.log(`Engineer added!`);
+  }
+  addIntern() {
+    console.log(`Intern added!`);
+  }
+  completeTeam() {
+    console.log(`Team Complete!`);
   }
 }
 
