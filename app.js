@@ -3,7 +3,6 @@ const functions = require('./lib/functions');
 const manager = require('./lib/manager');
 const engineer = require('./lib/engineer');
 const intern = require('./lib/intern');
-const inquirer = require('inquirer');
 
 const finalTeam = [];
 const finalTeamAsString = [];
@@ -20,8 +19,7 @@ class Team {
       managerInfo.managerEmail,
       managerInfo.officeNumber
     );
-    // console.log(this.manager);
-    // console.log(this.manager.getRole());
+    // this.manager.role = this.manager.getRole(); // leave commented out
     finalTeam.push(this.manager);
     this.addEmployee();
   }
