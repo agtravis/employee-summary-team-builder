@@ -4,8 +4,6 @@ const manager = require('./lib/manager');
 const engineer = require('./lib/engineer');
 const intern = require('./lib/intern');
 
-const finalTeam = [];
-const finalTeamAsString = [];
 const finalTeamHeadings = [];
 const finalTeamStats = [];
 
@@ -26,12 +24,10 @@ class Team {
       name: this.manager.getName()
     };
     const newManagerStats = {
-      id: this.manager.getName(),
+      id: this.manager.getId(),
       email: this.manager.getEmail(),
       officeNumber: this.manager.officeNumber
     };
-    // this.manager.role = this.manager.getRole(); // leave commented out
-    finalTeam.push(this.manager);
     finalTeamHeadings.push(newManagerHeadings);
     finalTeamStats.push(newManagerStats);
     this.addEmployee();
@@ -63,11 +59,10 @@ class Team {
       name: this.engineer.getName()
     };
     const newEngineerStats = {
-      id: this.engineer.getName(),
+      id: this.engineer.getId(),
       email: this.engineer.getEmail(),
       gitHub: this.engineer.getGitHub()
     };
-    finalTeam.push(this.engineer);
     finalTeamHeadings.push(newEngineerHeadings);
     finalTeamStats.push(newEngineerStats);
     this.addEmployee();
@@ -86,28 +81,17 @@ class Team {
       name: this.intern.getName()
     };
     const newInternStats = {
-      id: this.intern.getName(),
+      id: this.intern.getId(),
       email: this.intern.getEmail(),
       school: this.intern.getSchool()
     };
-    finalTeam.push(this.intern);
     finalTeamHeadings.push(newInternHeadings);
     finalTeamStats.push(newInternStats);
     this.addEmployee();
   }
   completeTeam() {
     console.log(`Team Complete!`);
-    console.log(finalTeamHeadings);
-    console.log(finalTeamStats);
-    for (const individual of finalTeam) {
-      const individualAsString = JSON.stringify(individual);
-      // console.log(individualAsString);
-      finalTeamAsString.push(individualAsString);
-    }
-    // console.log(finalTeamAsString);
-    // console.log(finalTeam);
-    // console.log(finalTeam[0].getRole());
-    // functions.displayTeamPage(finalTeam, finalTeamAsString);
+    functions.displayTeamPage(finalTeamHeadings, finalTeamStats);
   }
 }
 
