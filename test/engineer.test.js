@@ -61,3 +61,40 @@ describe('Engineer methods', () => {
     expect(actual).toEqual('Engineer');
   });
 });
+
+describe('assigned tests', () => {
+  test('Can set GitHUb account via constructor', () => {
+    const testValue = 'GitHubUser';
+    const engin = new engineer.Engineer(
+      'Foo',
+      1,
+      'Engineer',
+      'test@test.com',
+      testValue
+    );
+    expect(engin.getGitHub()).toBe(testValue);
+  });
+
+  test('getRole() should return "Engineer"', () => {
+    const testValue = 'Engineer';
+    const engin = new engineer.Engineer(
+      'Foo',
+      1,
+      'test@test.com',
+      'GitHubUser'
+    );
+    expect(engin.getRole()).toBe(testValue);
+  });
+
+  test('Can get GitHub username via getGithub()', () => {
+    const testValue = 'GitHubUser';
+    const engin = new engineer.Engineer(
+      'Foo',
+      1,
+      'Engineer',
+      'test@test.com',
+      testValue
+    );
+    expect(engin.getGitHub()).toBe(testValue);
+  });
+});
