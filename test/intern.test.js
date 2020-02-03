@@ -33,3 +33,35 @@ describe('Intern methods', () => {
     expect(actual).toEqual('Intern');
   });
 });
+
+describe('assigned tests', () => {
+  test('Can set school via constructor', () => {
+    const testValue = 'UCLA';
+    const int = new intern.Intern(
+      'Foo',
+      1,
+      'Intern',
+      'test@test.com',
+      testValue
+    );
+    expect(int.school).toBe(testValue);
+  });
+
+  test('getRole() should return "Intern"', () => {
+    const testValue = 'Intern';
+    const int = new intern.Intern('Foo', 1, 'Intern', 'test@test.com', 'UCLA');
+    expect(int.getRole()).toBe(testValue);
+  });
+
+  test('Can get school via getSchool()', () => {
+    const testValue = 'UCLA';
+    const int = new intern.Intern(
+      'Foo',
+      1,
+      'Intern',
+      'test@test.com',
+      testValue
+    );
+    expect(int.getSchool()).toBe(testValue);
+  });
+});
