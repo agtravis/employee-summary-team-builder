@@ -1,7 +1,7 @@
 'use strict';
   const teamDiv = document.getElementById('team-div');
-  const teamHeadingsArr = [{"role":"Manager","name":"George Travis"},{"role":"Engineer","name":"Bruce"},{"role":"Intern","name":"Conan"}];
-  const teamStatsArr = [{"id":"111","email":"agtravis85@gmail.com","officeNumber":"(206) 465-5911"},{"id":"222","email":"@","gitHub":"agtravis"},{"id":"333","email":"@","school":"UW"}];
+  const teamHeadingsArr = [{"role":"Manager","name":"George Travis"},{"role":"Engineer","name":"Bruce C. Springsteen"},{"role":"Intern","name":"Conan Oh Brian"}];
+  const teamStatsArr = [{"id":"233-5","email":"agtravis85@gmail.com","officeNumber":"2064655911"},{"id":"9-0","email":"bruce@email.co.uk","gitHub":"no_spaces"},{"id":"455","email":"con@n.com","school":"UW"}];
   
   console.log(teamHeadingsArr);
   console.log(teamStatsArr);
